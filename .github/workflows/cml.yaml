@@ -21,7 +21,7 @@ jobs:
           
           # Create a markdown document, push metrics in this doc
           echo "## Model Metrics" > report.md
-          cat matrics.txt >> report.md
+          cat metrics.txt >> report.md
           
           #Push images to markdown doc
           echo "## Data Vizualization"
