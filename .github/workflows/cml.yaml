@@ -18,3 +18,24 @@ jobs:
           #Print the metrics to terminal
           echo "Model Metrics"
           cat metrics.txt
+          
+          # Create a markdown document, push metrics in this doc
+          echo "## Model Metrics" > report.md
+          cat matrics.txt >> report.md
+          
+          #Push images to markdown doc
+          echo "## Data Vizualization"
+          cml-publish feature_importance.png --md >> report.md
+          cml-publish residuals.png --md >> report.md
+          
+          # Deliver the markdown doc 
+          echo "## Deliver report.md"
+          cml-send-comment report.md
+          
+          
+          
+          
+          
+          
+          
+          
